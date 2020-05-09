@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="@dimen/px1000"
+        android:layout_height="@dimen/px90"
+        android:layout_weight="0.00"
+        android:background="@drawable/input_box_oldnew_t">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px70"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="1dp"
+            android:includeFontPadding="false"
+            android:text="전문가(구옥) 검색"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/px42"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnDialogClose"
+            android:layout_width="@dimen/px66"
+            android:layout_height="@dimen/px66"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/px12"
+            android:layout_marginRight="@dimen/px50"
+            android:background="@drawable/btn_x" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/px1000"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_list_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="@dimen/px40"
+            android:layout_marginTop="@dimen/px10"
+            android:gravity="left"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px20"
+            android:layout_marginBottom="@dimen/px10"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnMyItem"
+                android:layout_width="@dimen/px170"
+                android:layout_height="@dimen/px70"
+                android:layout_marginLeft="@dimen/px30"
+                android:background="@drawable/button2"
+                android:text="나의매물"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/px32" />
+
+            <TextView
+                android:id="@+id/MyItem01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/px20"
+                android:text="내가 【등록】하거나 【알수있는】 매물 입니다."
+                android:textColor="#000000"
+                android:textSize="@dimen/px35" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px20"
+            android:layout_marginBottom="@dimen/px10"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnMyFavorite"
+                android:text="즐겨찾기"
+                android:textSize="@dimen/px32"
+                android:textColor="#ffffff"
+                android:layout_width="@dimen/px170"
+                android:layout_height="@dimen/px70"
+                android:layout_marginLeft="@dimen/px30"
+                android:background="@drawable/button2" />
+
+            <TextView
+                android:id="@+id/MyFavorite01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px20"
+                android:text="내가 【즐겨찾기】로 등록한 매물 입니다."
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@id/btnMyFavorite"
+                android:textColor="#000000"
+                android:textSize="@dimen/px35" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px20"
+            android:layout_marginBottom="@dimen/px10"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+
+            <Button
+                android:id="@+id/btnMyRecommend"
+                android:text="추천매물"
+                android:textSize="@dimen/px32"
+                android:textColor="#ffffff"
+                android:layout_width="@dimen/px170"
+                android:layout_height="@dimen/px70"
+                android:layout_marginLeft="@dimen/px30"
+                android:background="@drawable/button2" />
+
+            <TextView
+                android:id="@+id/MyRecommend01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px20"
+                android:text="빌라만에서 【추천】하는 매물입니다."
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"
+                android:textSize="@dimen/px35" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px20"
+            android:layout_marginBottom="@dimen/px10"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+
+            <Button
+                android:id="@+id/btnMyBlank"
+                android:text="공실매물"
+                android:textSize="@dimen/px32"
+                android:textColor="#ffffff"
+                android:layout_width="@dimen/px170"
+                android:layout_height="@dimen/px70"
+                android:layout_marginLeft="@dimen/px30"
+                android:background="@drawable/button2" />
+
+            <TextView
+                android:id="@+id/MyBlank01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px20"
+                android:text="현제 【공실】인 매물 입니다."
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"
+                android:textSize="@dimen/px35" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/a000Blank"
+                android:layout_width="@dimen/px150"
+                android:layout_height="@dimen/px50"
+                android:layout_marginLeft="@dimen/px30"
+                android:gravity="right"
+                android:text="사진유무"
+                android:textColor="#ff0000"
+                android:textSize="@dimen/px30" />
+
+            <RadioGroup
+                android:id="@+id/MyBlankPicynGR"
+                android:layout_width="@dimen/px600"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/px50"
+                android:gravity="left"
+                android:checkedButton="@+id/MyBlankPicyn00"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@id/MyBlankPicyn00"
+                    android:layout_width="@dimen/px200"
+                    android:layout_height="@dimen/px50"
+                    android:text="전체"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/px30" />
+
+                <RadioButton
+                    android:id="@+id/MyBlankPicyn01"
+                    android:layout_width="@dimen/px200"
+                    android:layout_height="@dimen/px50"
+                    android:text="유"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/px30" />
+
+                <RadioButton
+                    android:id="@+id/MyBlankPicyn02"
+                    android:layout_width="@dimen/px200"
+                    android:layout_height="@dimen/px50"
+                    android:text="무"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/px30" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="@dimen/px20">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px20"
+            android:layout_marginBottom="@dimen/px10"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnMyNew"
+                android:text="최신매물"
+                android:textSize="@dimen/px32"
+                android:textColor="#ffffff"
+                android:layout_width="@dimen/px170"
+                android:layout_height="@dimen/px70"
+                android:layout_marginLeft="@dimen/px30"
+                android:background="@drawable/button2" />
+            <TextView
+                android:id="@+id/MyNew01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px20"
+                android:text="최근 ["
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"
+                android:textSize="@dimen/px35" />
+            <EditText
+                android:id="@+id/MyNew02"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:gravity="center_vertical"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="@dimen/px28" />
+
+            <TextView
+                android:id="@+id/MyNew03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="]일 이내에 【추가】된 매물입니다."
+                android:textColor="#000000"
+                android:textSize="@dimen/px35"
+                android:layout_marginLeft="@dimen/px2"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/a000New"
+                android:layout_width="@dimen/px150"
+                android:layout_height="@dimen/px50"
+                android:layout_marginLeft="@dimen/px30"
+                android:gravity="right"
+                android:text="공실여부"
+                android:textColor="#ff0000"
+                android:textSize="@dimen/px30" />
+
+            <RadioGroup
+                android:id="@+id/MyNewEmptyGR"
+                android:layout_width="@dimen/px600"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/px50"
+                android:gravity="left"
+                android:checkedButton="@+id/MyNewEmpty00"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@id/MyNewEmpty00"
+                    android:layout_width="@dimen/px200"
+                    android:layout_height="@dimen/px50"
+                    android:text="전체"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/px30" />
+
+                <RadioButton
+                    android:id="@+id/MyNewEmpty01"
+                    android:layout_width="@dimen/px200"
+                    android:layout_height="@dimen/px50"
+                    android:text="공실"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/px30" />
+
+                <RadioButton
+                    android:id="@+id/MyNewEmpty02"
+                    android:layout_width="@dimen/px200"
+                    android:layout_height="@dimen/px50"
+                    android:text="거주중"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/px30" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/aNew12"
+                android:layout_width="@dimen/px150"
+                android:layout_height="@dimen/px50"
+                android:layout_marginLeft="@dimen/px30"
+                android:gravity="right"
+                android:text="사진유무"
+                android:textColor="#ff0000"
+                android:textSize="@dimen/px30" />
+
+            <RadioGroup
+                android:id="@+id/MyNewPicynGR"
+                android:layout_width="@dimen/px600"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/px50"
+                android:gravity="left"
+                android:checkedButton="@+id/MyNewPicyn00"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@id/MyNewPicyn00"
+                    android:layout_width="@dimen/px200"
+                    android:layout_height="@dimen/px50"
+                    android:text="전체"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/px30" />
+
+                <RadioButton
+                    android:id="@+id/MyNewPicyn01"
+                    android:layout_width="@dimen/px200"
+                    android:layout_height="@dimen/px50"
+                    android:text="유"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/px30" />
+
+                <RadioButton
+                    android:id="@+id/MyNewPicyn02"
+                    android:layout_width="@dimen/px200"
+                    android:layout_height="@dimen/px50"
+                    android:text="무"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/px30" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px20"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+
+            <Button
+                android:id="@+id/btnMyConfirm"
+                android:text="확인매물"
+                android:textSize="@dimen/px32"
+                android:textColor="#ffffff"
+                android:layout_width="@dimen/px170"
+                android:layout_height="@dimen/px70"
+                android:layout_marginLeft="@dimen/px30"
+                android:background="@drawable/button2" />
+
+            <TextView
+                android:id="@+id/MyConfirm01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px20"
+                android:gravity="center|right"
+                android:text="최근 ["
+                android:textColor="#000000"
+                android:textSize="@dimen/px35" />
+
+            <EditText
+                android:id="@+id/MyConfirm02"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:gravity="center_vertical"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="@dimen/px28" />
+
+            <TextView
+                android:id="@+id/MyConfirm03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="]일 이내에 【확인】한 매물입니다."
+                android:textColor="#000000"
+                android:textSize="@dimen/px35"
+                android:layout_marginLeft="@dimen/px2"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/a00011"
+                android:layout_width="@dimen/px150"
+                android:layout_height="@dimen/px50"
+                android:layout_marginLeft="@dimen/px30"
+                android:gravity="right"
+                android:text="공실여부"
+                android:textColor="#ff0000"
+                android:textSize="@dimen/px30" />
+
+            <RadioGroup
+                android:id="@+id/MyConEmptyGR"
+                android:layout_width="@dimen/px600"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/px50"
+                android:gravity="left"
+                android:checkedButton="@+id/MyConEmpty00"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@id/MyConEmpty00"
+                    android:layout_width="@dimen/px200"
+                    android:layout_height="@dimen/px50"
+                    android:text="전체"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/px30" />
+
+                <RadioButton
+                    android:id="@+id/MyConEmpty01"
+                    android:layout_width="@dimen/px200"
+                    android:layout_height="@dimen/px50"
+                    android:text="공실"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/px30" />
+
+                <RadioButton
+                    android:id="@+id/MyConEmpty02"
+                    android:layout_width="@dimen/px200"
+                    android:layout_height="@dimen/px50"
+                    android:text="거주중"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/px30" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/a00012"
+                android:layout_width="@dimen/px150"
+                android:layout_height="@dimen/px50"
+                android:layout_marginLeft="@dimen/px30"
+                android:gravity="right"
+                android:text="사진유무"
+                android:textColor="#ff0000"
+                android:textSize="@dimen/px30" />
+
+            <RadioGroup
+                android:id="@+id/MyConPicynGR"
+                android:layout_width="@dimen/px600"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/px50"
+                android:gravity="left"
+                android:checkedButton="@+id/MyConPicyn00"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@id/MyConPicyn00"
+                    android:layout_width="@dimen/px200"
+                    android:layout_height="@dimen/px50"
+                    android:text="전체"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/px30" />
+
+                <RadioButton
+                    android:id="@+id/MyConPicyn01"
+                    android:layout_width="@dimen/px200"
+                    android:layout_height="@dimen/px50"
+                    android:text="유"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/px30" />
+
+                <RadioButton
+                    android:id="@+id/MyConPicyn02"
+                    android:layout_width="@dimen/px200"
+                    android:layout_height="@dimen/px50"
+                    android:text="무"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/px30" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="@dimen/px20">
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="@dimen/px20">
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="@dimen/px110"
+            android:layout_marginTop="@dimen/px10"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnRangeCancel"
+                android:text="닫기"
+                android:textSize="@dimen/px40"
+                android:textColor="#ffffff"
+                android:layout_width="@dimen/px190"
+                android:layout_height="@dimen/px80"
+                android:layout_marginLeft="@dimen/px90"
+                android:background="@drawable/button3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px1000"
+            android:layout_height="@dimen/px20"
+            android:layout_marginTop="@dimen/px10"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
